@@ -3,7 +3,7 @@ MAINTAINER Tobias Raatiniemi <raatiniemi@gmail.com>
 
 ENV JIRA_HOME /var/atlassian/jira
 ENV JIRA_INSTALL /opt/atlassian/jira
-ENV JIRA_VERSION 7.1.5
+ENV JIRA_VERSION 7.1.6
 
 RUN set -x \
 	&& apt-get update \
