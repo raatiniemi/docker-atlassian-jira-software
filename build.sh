@@ -1,2 +1,2 @@
 #!/bin/env bash
-docker build -t raatiniemi/atlassian-jira-software:7.1.6 .
+docker build -t raatiniemi/atlassian-jira-software:latest .
