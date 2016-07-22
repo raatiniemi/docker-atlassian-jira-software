@@ -3,7 +3,7 @@ MAINTAINER Tobias Raatiniemi <raatiniemi@gmail.com>
 
 ENV JIRA_HOME /var/atlassian/jira
 ENV JIRA_INSTALL /opt/atlassian/jira
-ENV JIRA_VERSION 7.1.8
+ENV JIRA_VERSION 7.1.9
 
 RUN set -x \
 	&& apt-get update \
@@ -11,7 +11,7 @@ RUN set -x \
 	&& mkdir -p "${JIRA_HOME}/caches/indexes" \
 	&& chmod -R 700 "${JIRA_HOME}" \
 	&& mkdir -p "${JIRA_INSTALL}/conf/Catalina" \
-	&& curl -Ls "https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-${JIRA_VERSION}-jira-${JIRA_VERSION}.tar.gz" \
+	&& curl -Ls "https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-${JIRA_VERSION}.tar.gz" \
 		| tar -xz --directory "${JIRA_INSTALL}" --strip-components=1 --no-same-owner \
 	&& chmod -R 700 "${JIRA_INSTALL}/conf" \
 	&& chmod -R 700 "${JIRA_INSTALL}/logs" \
